@@ -1,0 +1,35 @@
+* ロバストプロトコル
+
+#+ATTR_HTML:
+[[https://github.com/Siva0410/udptable/blob/main/udptable.png]]
+
+50%のパケットが損失する10BASE-T Duplex上でファイルを転送する自作プロトコル
+
+↓↓ロバストプロコル・オープンチャレンジ大会参加記兼解説↓↓
+
+https://www.honamium.net/post/robust/
+
+** 使用方法
+転送用ファイル作成
+
+$ ./make_randomfile.py {作成したいファイル数}
+
+
+ファイルのハッシュ取得
+
+$ ./getmd5.py
+
+
+reciever起動
+
+$ ./recv.py local
+
+
+sender起動
+
+$ ./send.py 
+
+
+転送したファイルのハッシュ確認
+
+$ ./checkfile.py
